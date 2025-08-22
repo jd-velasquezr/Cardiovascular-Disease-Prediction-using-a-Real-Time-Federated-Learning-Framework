@@ -1,6 +1,5 @@
 # Cardiovascular-Disease-Prediction-using-a-Real-Time-Federated-Learning-Framework
-// DESCRIPTION//
-
+----------------------------------------------------------------------------------
 This repository implements a real time federated learning framework to classify six cardiovascular diseases from ECG recordings using 1D CNN BiLSTM models. Three independent clients, simulating healthcare institutions, train locally on separate datasets and send model weights to a central server, which aggregates and returns an updated global model, preserving privacy and minimizing response and update times. 
 
 The ECG preprocessing pipeline, including sample standardization, noise and temporal variation filtering, scaling, and feature selection, aims to balance interpretability and performance. We compare aggregation strategies: FedAvg, a performance weighted scheme that favors clients with higher local scores, and DQ Fed, which weights clients by data quality indicators such as label balance, noise presence, and training stability. DQ Fed achieved the best average results across metrics, outperforming FedAvg by 0.71% and the performance weighted approach by 0.41%, delivering steady round over round gains and narrowing inter client performance gaps. 
